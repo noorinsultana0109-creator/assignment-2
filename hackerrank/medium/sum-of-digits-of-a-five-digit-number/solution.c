@@ -3,26 +3,15 @@
 #include <math.h>
 #include <stdlib.h>
 
-
-
-int main() 
-{
-    int a, b;
-    scanf("%d\n%d", &a, &b);
-    char*words[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-
-for (int i = a; i <= b; i++) {
-    if (i >= 1 && i <= 9) {
-        printf("%s\n", words[i]);
-    }else if (i > 9) {
-        if (i % 2 == 0) {
-            printf("even\n");
-        }else {
-            printf("odd\n");
-        }
+int main() {
+	
+    int n;
+    scanf("%d", &n);
+    int sum = 0;
+    while (n > 0) {
+        sum += n % 10;
+        n = n / 10;
     }
-}
-
+    printf("%d\n", sum);
     return 0;
 }
-
